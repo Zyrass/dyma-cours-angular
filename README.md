@@ -3,3 +3,4 @@
 
 ## Sommaire
 1. first-install - *Explication de la première installation du framework d'angular*.
+2. understand-main - *Comprendre le fonctionnement du fichier main.ts*
