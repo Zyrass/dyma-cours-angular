@@ -23,8 +23,10 @@ ng new first-install
 
 ## Development server local
 Used your **terminal** :
-> Run `ng serve` for a dev server. 
+> Run `ng serve` for a dev server.
+
 Used your **browser** :
-> Navigate to [Localhost](http://localhost:4200/). 
+> Navigate to [Localhost](http://localhost:4200/).
+
 Advantage :
 > The app will automatically reload if you change any of the source files.
