@@ -2,7 +2,13 @@
 |----------------------------------------------------------------------------------
 | MAIN.TS
 |----------------------------------------------------------------------------------
-| Tout passe par ce fichier afin de pouvoir faire fonctionner nôtre application.
+| Main.ts va nous permettre de faire en sorte que nos navigateurs puissent
+| interprêter nos "tags" qu'on aura créer de toute pièce grâce à nos composants.
+| Aussi appelé (component).
+|
+| Le fichier main.ts est donc une brique indispensable au bon fonctionnement 
+| de notre application.
+|----------------------------------------------------------------------------------
 */
 
 import { enableProdMode } from '@angular/core';
