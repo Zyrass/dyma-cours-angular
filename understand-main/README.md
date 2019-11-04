@@ -7,6 +7,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 2. app.module.ts - *Look in second*
 3. app.component.ts - *Look in third*
 4. app.component.html - *Look in fourth*
-5. `optional` app.component.css - *Only Style CSS on your component*
+5. `optional` app.component.css - *Only Style CSS on our component*
 6. index.html - *Look in fifth*
 7. styles.css - *Style CSS Global*
