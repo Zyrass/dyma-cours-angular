@@ -4,4 +4,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## methods lists
 1. with a CLI - *Look the folder : ./app/new-cli*
-2. whitout a CLI - *Look the folder : ./app/newgit -by-hand*
+2. whitout a CLI - *Look the folder : ./app/new-by-hand*
+3. without a CLI and add an interpolation - *Look the folder : ./dyma-premier-component*
