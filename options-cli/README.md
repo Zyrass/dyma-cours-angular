@@ -1,5 +1,4 @@
-# Options-CLI - 
-# (Les options utilisables dans la conception d'un component avec le CLI)
+# Options-CLI on component created -
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
 
