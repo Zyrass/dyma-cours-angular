@@ -13,7 +13,7 @@ import { NgModule } from '@angular/core';
 
 /*
 |----------------------------------------------------------------------------------
-| Ici j'importe le fichier app.component.ts
+| Ici j'importe la classe AppComponent du fichier app/app.component.ts
 |----------------------------------------------------------------------------------
 */
 import { AppComponent } from './app.component';
@@ -32,7 +32,7 @@ import { AppComponent } from './app.component';
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent] // Chargement d'un components ici (1 seul). 
+  bootstrap: [AppComponent] // Chargement d'un component. (ici un seul est chargé) 
 })
 
 /*
