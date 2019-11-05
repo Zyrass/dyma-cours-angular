@@ -5,6 +5,7 @@
 1. **first-install** - *Explication de la première installation du framework d'Angular*.
 2. **understand-main** - *Comprendre le fonctionnement du fichier main.ts*
 3. **creating-a-component** - *Création d'un composant avec le CLI et sans*
+4. **options-cli** - *Voir les options possible avec la génération d'un composant avec le CLI*
 
 ## Run Development server
 
