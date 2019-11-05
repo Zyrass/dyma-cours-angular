@@ -2,8 +2,6 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
 
----
-
 ## methods lists
 1. **without options** - *Look the folder : ./app/without-options*
     In the terminal : 
@@ -33,10 +31,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     ```
     ng generate component with-inlinetemplate -t
     ```
+5. **without test file : --skipTests=true (no shortcut)** - *Look the folder : ./app/without-test-file*
+    In the terminal : 
+    ```
+    ng generate component without-test-file --skipTests=true
+    ```
 
----
-
-## Development server
+## Run Development server
 
 Run ``` ng serve ``` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
