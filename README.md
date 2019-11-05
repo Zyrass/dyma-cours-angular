@@ -7,7 +7,7 @@
 3. **creating-a-component** - *Création d'un composant avec le CLI et sans*
 4. **options-cli** - *Voir les options possible avec la génération d'un composant avec le CLI*
 
-## Run Development server
+## Lancé un serveur de développement en local
 
 Lancer la commande : ``` ng serve ``` pour obtenir un serveur local qui compilera tout le code afin de le visualiser dans notre navigateur. 
 
