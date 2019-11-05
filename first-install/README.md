@@ -7,13 +7,11 @@ Used your **terminal** :
 ```
 npm install -g @angular/cli
 ```
-
 ## Which one Angular version is installed
 Used your **terminal** :
 ```
 ng v
 ```
-
 ## Creation of a new application.
 Used your **terminal** :
 ```
@@ -21,12 +19,10 @@ ng new first-install
 ```
 > first-install = *it's folder name*
 
-## Development server local
-Used your **terminal** :
-> Run `ng serve` for a dev server.
+## Run Development server
 
-Used your **browser** :
-> Navigate to [Localhost](http://localhost:4200/).
+Run ``` ng serve ``` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Advantage :
-> The app will automatically reload if you change any of the source files.
+or
+
+Run ``` ng serve --port 9999 ``` for a dev server. Navigate to `http://localhost:9999/`. The app will automatically reload if you change any of the source files.
