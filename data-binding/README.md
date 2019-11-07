@@ -10,7 +10,7 @@ ng generate component string-interpolation --skipTests=true -s
 
 ## property-binding - (La liaison de propriété)
 ```
-ng generate component property-binding --skipTests=true -s -t
+ng generate component property-binding --skipTests=true --inlineStyle=true
 ```
 
 ## event-binding - (La liaison d'évènement)
