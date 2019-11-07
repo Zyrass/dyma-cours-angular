@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## string-interpolation - (Interpolation de chaîne de caractères)
 ```
-ng generate component string-interpolation --skipTests=true -s -t
+ng generate component string-interpolation --skipTests=true -s
 ```
 > *Here, we use a basic interpolation with {{ }}*
 
