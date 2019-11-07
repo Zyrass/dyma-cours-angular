@@ -9,8 +9,19 @@ ng generate component string-interpolation --skipTests=true -s -t
 > *Here, we use a basic interpolation with {{ }}*
 
 ## property-binding - (La liaison de propriété)
+```
+ng generate component property-binding --skipTests=true -s -t
+```
+
 ## event-binding - (La liaison d'évènement)
+```
+ng generate component event-binding --skipTests=true -s -t
+```
+
 ## two-way-data-binding - (Le double data-binding)
+```
+ng generate component two-way-data-binding --skipTests=true -s -t
+```
 
 ## Run Development server
 
