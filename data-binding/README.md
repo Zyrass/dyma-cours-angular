@@ -12,6 +12,7 @@ ng generate component string-interpolation --skipTests=true -s
 ```
 ng generate component property-binding --skipTests=true --inlineStyle=true
 ```
+> *Here, we use a property-binding with [attribut]="myProperty" -> myProperty is a variable*
 
 ## event-binding - (La liaison d'évènement)
 ```
