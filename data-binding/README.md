@@ -16,7 +16,7 @@ ng generate component property-binding --skipTests=true --inlineStyle=true
 
 ## event-binding - (La liaison d'évènement)
 ```
-ng generate component event-binding --skipTests=true -s -t
+ng generate component event-binding --skipTests=true
 ```
 
 ## two-way-data-binding - (Le double data-binding)
