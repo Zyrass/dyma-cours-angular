@@ -8,19 +8,33 @@ import { Component } from '@angular/core';
 
 export class StringInterpolationComponent {
 
-  interpolationString: string;
-  booleanInterpolation: boolean;
-  numberInterpolation: number;
-  objectInterpolation: { firstname: string, lastname: string};
+  /*
+  |----------------------------------------------------------------------------------
+  | Définition des variables qui seront interpolé
+  |----------------------------------------------------------------------------------
+  */
+  public interpolationString: string;
+  public booleanInterpolation: boolean;
+  public numberInterpolation: number;
+  public objectInterpolation: { firstname: string, lastname: string};
 
   constructor() {
-    this.interpolationString = "I'm a content of interpolationString variable";
+
+    // Type string
+    this.interpolationString = "I'm a content of the interpolationString variable";
+
+    // Type boolean
     this.booleanInterpolation = true;
+
+    // Type number
     this.numberInterpolation = 69;
+
+    // Type object
     this.objectInterpolation = {
       firstname: "Alain",
       lastname: "Guillon"
     }
+
   }
 
 }
