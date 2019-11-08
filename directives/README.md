@@ -4,6 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## 1 - Directive of Attributes
 > *ANG : Attribute directives change the behavior or appearance of an element*
+
 > *FR : Les directives d'attributs modifient le comportement où l'apparence d'un élément*
 ### 1a - ngStyle (native directive)
 > *à éditer*
@@ -12,6 +13,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## 2 - Structural directive
 > *ANG : The structural directives change the structure of the DOM. For example, by **adding** by **deleting** or **manipulating** elements.*
+
 > *FR : Les directives structurelles modifient la structure du DOM. Par exemple en **ajoutant** en **supprimant** ou en **manipulant** des éléments.*
 
 ### 2a - *ngIf (native directive)
