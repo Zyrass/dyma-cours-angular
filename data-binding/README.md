@@ -24,7 +24,7 @@ ng generate component event-binding --skipTests=true
 ```
 ng generate component two-way-data-binding --skipTests=true --inlineStyle=true
 ```
-
+> *Here, we use two inputs that update automaticaly two paragraphs*
 
 ## Run Development server
 

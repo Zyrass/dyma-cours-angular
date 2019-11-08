@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './two-way-data-binding.component.html',
   styles: []
 })
+
 export class TwoWayDataBindingComponent {
 
   public myFirstname: string;
@@ -14,4 +15,5 @@ export class TwoWayDataBindingComponent {
     this.myFirstname = "";
     this.myLastname = "";
   }
+
 }
