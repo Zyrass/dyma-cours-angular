@@ -1,0 +1,6 @@
+fieldset p {
+    padding: 20px;
+    border: 1px dotted light;
+    cursor: pointer;
+    color: light;
+}

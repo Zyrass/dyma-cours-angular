@@ -1,4 +1,42 @@
 <h2>3 - Folder : <mark>event-binding</mark></h2>
 <br />
 
-A REVOIR
+<fieldset>
+    <legend>Ex: Event-Binding</legend>
+
+    <h3>Description</h3>
+    <ol>
+        <li>Conception of a paragraph</li>
+        <li>When hover paragraphe, this color change in blue.</li>
+        <li>When leave paragraphe, this color has reset.</li>
+        <li>When click on paragraph, this color has purple</li>
+    </ol>
+
+    <h3>Practice below</h3>
+
+    <!-- 
+    /*
+    |----------------------------------------------------------------------------------
+    | Définition des "events" qui vont nous permettre d'interargir avec le paragraphe.
+    |----------------------------------------------------------------------------------
+    | Ici 3 events : (event)
+    |   2 - (click)         remplace    on-click()
+    |   3 - (mouseenter)    remplace    on-mouseenter()
+    |   4 - (mouseleave)    remplace    on-mouseleave()
+    |----------------------------------------------------------------------------------
+    */
+    -->
+    <p 
+        [style.backgroundColor]='myBackgroundColor' 
+        (click)='changeTheBackgroundColor("lightpink", $event)'
+        (mouseenter)='changeTheBackgroundColor("lightskyblue", $event)' 
+        (mouseleave)='changeTheBackgroundColor("lightgrey", $event)'
+    >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae laboriosam provident deleniti
+        asperiores officia facere sed ut ex possimus animi dolorem eos, neque porro sint? Dolores laboriosam amet harum
+        eaque incidunt a ad. Dicta nostrum suscipit a nisi, blanditiis ipsa eos vitae voluptatibus, delectus et eum?
+        Accusamus unde itaque enim voluptatibus velit deleniti, omnis repellendus neque. A eius beatae eaque harum quasi
+        dolor quidem dolore ex corrupti ab!
+    </p>
+
+</fieldset>
