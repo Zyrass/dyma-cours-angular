@@ -22,8 +22,9 @@ ng generate component event-binding --skipTests=true
 
 ## two-way-data-binding - (Le double data-binding)
 ```
-ng generate component two-way-data-binding --skipTests=true -s -t
+ng generate component two-way-data-binding --skipTests=true --inlineStyle=true
 ```
+
 
 ## Run Development server
 

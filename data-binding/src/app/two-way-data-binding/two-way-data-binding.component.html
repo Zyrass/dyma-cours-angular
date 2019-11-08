@@ -1,0 +1,38 @@
+<h2>4 - Folder : <mark>two-way-data-binding</mark></h2>
+
+<fieldset>
+    <legend>Ex: two-way-data-binding</legend>
+
+    <h3>Description</h3>
+    <ol>
+        <li>Conception of two inputs</li>
+        <li>Add a two-way-data-binding</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+
+    <h3>Practice below</h3>
+
+    <label for="firstname">Firstname : </label>
+    <input
+        type="text"
+        id="firstname"
+        [(ngModel)]="myFirstname"
+    />
+
+    <br />
+
+    <label for="jerome">Lastname : </label>
+    <input 
+        type="text"
+        id="jerome"
+        [(ngModel)]="myLastname"
+    />
+
+    <p>
+        Prénom : {{ myFirstname }}<br />
+        Nom : {{ myLastname }}
+    </p>
+</fieldset>
