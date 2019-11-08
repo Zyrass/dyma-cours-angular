@@ -18,6 +18,7 @@ ng generate component property-binding --skipTests=true --inlineStyle=true
 ```
 ng generate component event-binding --skipTests=true
 ```
+> *Here, we use the event for look the event used for our action in our console.log. And we use (event). Ex : (mouseenter)='blablabla' ; (click)='blablabla' etc...*
 
 ## two-way-data-binding - (Le double data-binding)
 ```
