@@ -4,13 +4,7 @@ import { Component } from '@angular/core';
 
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styles: [`
-    
-  `]
-
-
+  styles: []
 })
 
-export class AppComponent{
-
-}
+export class AppComponent {}
