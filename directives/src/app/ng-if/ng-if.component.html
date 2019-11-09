@@ -1,0 +1,33 @@
+<h3>*ngIf</h3>
+
+Les affichages possible :
+<ul>
+    <li>*ngIf="unContenu" <strong>renverra</strong> true</li>
+    <li>*ngIf="1" <strong>renverra</strong> true</li>
+    <br />
+    <li>*ngIf="" <strong>renverra</strong> false</li>
+    <li>*ngIf="0" <strong>renverra</strong> false</li>
+    <li>*ngIf="null" <strong>renverra</strong> false</li>
+    <li>*ngIf="undefined" <strong>renverra</strong> false</li>
+</ul>
+
+<fieldset>
+    <legend>Description</legend>
+    <p>Je créer un bouton qui au clic inversera sa valeure booléenne afin d'afficher un des paragraphes ci-dessous.</p>
+    <hr />
+    <h4>Paragraphe 1 : <em>Visible si la valeur est à true</em></h4>
+    <p>{{ paragraphe1 }}</p>
+    <h4>Paragraphe 2 : <em>Visible si la valeur est à false</em> </h4>
+    <p>{{ paragraphe2}}</p>
+</fieldset>
+<br />
+<fieldset>
+    <legend>Exo</legend>
+    <button (click)="display=!display">Changer la valeur booléenne</button>&nbsp; - ( {{ display }} )
+    <br />
+    <p *ngIf="display">{{ paragraphe1 }}</p>
+    <p *ngIf="!display">{{ paragraphe2 }}</p>
+</fieldset>
+
+
+
