@@ -1,0 +1,17 @@
+<h3>[ngClass]</h3>
+<p>Reprise du rectangle précédent avec l'ajout d'un champ permettant de définir une couleur pour le background.</p>
+
+<label for="choiceColor">Choix de la couleur : </label>
+<input [ngModel]="backgroundColor" type="text" id="choiceColor" placeholder="Saisissez le nom d'une couleur ici" />
+
+<br />
+
+<div 
+    class="rectangle"
+    [ngClass]="{
+        'skyblue' : backgroundColor === 'lightskyblue';
+        'salomon' : backgroundColor === 'lightsalomon';
+    }"
+></div>
+
+<br />

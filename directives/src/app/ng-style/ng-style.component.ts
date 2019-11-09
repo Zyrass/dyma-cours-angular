@@ -4,9 +4,9 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-ng-style',
   templateUrl: './ng-style.component.html',
   styles: [`
-  .carre {
-    height: 150px;
-    width: 150px;
+  .rectangle {
+    min-height: 100px;
+    max-width: 200px;
     background-color: lightskyblue;
     margin: 20px;
   }
@@ -16,22 +16,37 @@ import { Component, OnInit } from '@angular/core';
 
 export class NgStyleComponent implements OnInit {
   
-  public testModifCarre: {};
+  public testModifRectangle: {};
 
+  /*
+  |----------------------------------------------------------------------------------
+  | Définition des variables qui sont a modifier.
+  |----------------------------------------------------------------------------------
+  */
   boxShadow: boolean = true;
   borderRadius: boolean = true;
   borderSolid: boolean = true;
 
-  setTestModifCarre() {
-    this.testModifCarre = {
+  /*
+  |----------------------------------------------------------------------------------
+  | Définition d'un setter pour modifier le contenu via un ternaire.
+  |----------------------------------------------------------------------------------
+  */
+  setTestModifRectangle() {
+    this.testModifRectangle = {
       "box-shadow" : this.boxShadow ? "0 0 10px black" : "none",
-      "border-radius" : this.borderRadius ? "25px" : "none",
+      "border-radius" : this.borderRadius ? "30px" : "none",
       "border" : this.borderSolid ? "1px solid black" : "none"
     }
   }
 
+  /*
+  |----------------------------------------------------------------------------------
+  | Chargement du contenu (je ne connais pas encore OnInit)
+  |----------------------------------------------------------------------------------
+  */
   ngOnInit() {
-    this.setTestModifCarre();
+    this.setTestModifRectangle();
   }
 
 }
