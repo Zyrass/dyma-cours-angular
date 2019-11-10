@@ -1,0 +1,30 @@
+<h3>*ngFor</h3>
+
+<fieldset>
+    <legend>La syntaxe</legend>
+    *ngFor="let joueur of lyonnais"
+</fieldset>
+
+<table>
+    <caption>Olympique Lyonnais</caption>
+    <thead>
+        <tr>
+            <th>N°</th>
+            <th>Nationalité</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Poste</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let player of club_OL">
+            <td>{{ player.number }}</td>
+            <td>{{ player.nationality }}</td>
+            <td>{{ player.lastname}}</td>
+            <td>{{ player.firstname}}</td>
+            <td>{{ player.position}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<p></p>
