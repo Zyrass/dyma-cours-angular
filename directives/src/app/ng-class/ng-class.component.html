@@ -1,7 +1,39 @@
 <h3>[ngClass]</h3>
-<p>Reprise du rectangle précédent avec l'ajout d'un champ permettant de définir une couleur pour le background.</p>
+<p>Reprise du rectangle précédent avec un changement dans la couleur de fond afin de bien visualiser les modifications.<br />
+Les modifications elles, se font en live grâce aux classes qui s'ajoute lors d'un quelconque clic.</p>
 
-<label for="choiceColor">Choix de la couleur : </label>
-<input type="text" id="choiceColor" placeholder="Saisissez le nom d'une couleur ici" />
+<!--
+    |----------------------------------------------------------------------------------------
+    | Définition des futurs classes qui seront stylisé le tout dans un objet.
+    | Également j'appel chaque propriété qui renvoie un booléen. 
+    |----------------------------------------------------------------------------------------
+-->
+<div 
+class="rectangle2"
+[ngClass]="{
+    'ombre' : boxShadow === true,
+    'arrondi' : borderRadius === true,
+    'bordure': borderSolid === true
+}"
+>
 
-<br />
+    <!--
+        |----------------------------------------------------------------------------------------
+        | Interpolation des propriétés créer dans ng-class.component.ts
+        |----------------------------------------------------------------------------------------
+    -->
+    <ul>
+        <li>box-shadow : {{ boxShadow }}</li>
+        <li>border-radious : {{ borderRadius }}</li>
+        <li>border : {{ borderSolid }}</li>
+    </ul>
+</div>
+
+<!--
+    |----------------------------------------------------------------------------------------
+    | Conception d'un évènement clic qui permet de modifier l'affichage.
+    |----------------------------------------------------------------------------------------
+-->
+<button (click)="boxShadow=!boxShadow" >box-shadow : 0 0 10px black</button>&nbsp;
+<button (click)="borderRadius=!borderRadius" >border-radious : 30px</button>&nbsp;
+<button (click)="borderSolid=!borderSolid" >border: 1px solid black</button>

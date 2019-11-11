@@ -1,0 +1,11 @@
+.rectangle2 {
+    min-height: 100px;
+    max-width: 200px;
+    background-color: lightcoral;
+    margin: 20px;
+}
+
+/* définition des classes qui seront elles utilisées via la directive ngClass */
+.ombre { box-shadow: 0 0 10px black; }
+.arrondi { border-radius: 30px; }
+.bordure { border: 1px solid black; }
