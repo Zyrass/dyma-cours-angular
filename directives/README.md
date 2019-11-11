@@ -7,9 +7,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 > *FR : Les directives d'attributs modifient le comportement où l'apparence d'un élément*
 ### 1a - ngStyle (native directive)
-> *à éditer*
+```
+ng generate component ng-style --skipTests=true --inlineStyle=true
+```
+> *Here, we add of styles on our rectangle"
 ### 1b - ngClass (native directive)
-> *à éditer*
+```
+ng generate component ng-class --skipTests=true
+```
+> *Here, we add of class on our rectangle"
 
 ## 2 - Structural directive
 > *ANG : The structural directives change the structure of the DOM. For example, by **adding** by **deleting** or **manipulating** elements.*
