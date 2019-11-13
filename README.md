@@ -8,6 +8,7 @@
 4. **options-cli** - *Voir les options possible avec la génération d'un composant avec le CLI*
 5. **data-binding** - *Apprendre à utiliser les différentes possibilités pour interpoller notre contenu*
 6. **directives** - *Utilisations des 3 types de directives existante **Les components**, **Les directives d'attributs** et **Les directives structurelles***
+7. **projet-cocktails-demo** - *Projet crée avec Dyma*
 
 ## Lancé un serveur de développement en local
 
