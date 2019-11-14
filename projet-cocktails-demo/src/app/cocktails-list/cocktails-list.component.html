@@ -5,7 +5,8 @@
 </div>
 
 <ul class="list-group text-center">
-    <li *ngFor="let mycocktail of cocktails" class="list-group-item">{{ mycocktail.name }}</li>
+    <li *ngFor="let cocktail of tableauDesCocktails" class="list-group-item list-group-item-action">{{ cocktail.name }}
+    </li>
 </ul>
 
 <button class="btn btn-outline-primary mt-4">Ajouter un cocktail</button>

@@ -8,20 +8,19 @@ import { Cocktail } from '../shared/cocktail.model';
 })
 export class CocktailsListComponent implements OnInit {
 
-  public cocktails: Cocktail[] = [];
+  public tableauDesCocktails: Cocktail[] = [];
 
   constructor() {
-    this.cocktails = [
-      new Cocktail("Mojito", "Photo représentative du Mojito", "blablabla", "Description"),
-      new Cocktail("Vendetta", "Photo représentative du Mojito", "blablabla", "Description"),
-      new Cocktail("Virgin Colada", "Photo représentative du Mojito", "blablabla", "Description"),
-      new Cocktail("Secret de la mer", "Photo représentative du Mojito", "blablabla", "Description"),
-      new Cocktail("Punch", "Photo représentative du Mojito", "blablabla", "Description"),
-      new Cocktail("Le kama sutra", "Photo représentative du Mojito", "blablabla", "Description"),
-    ]
+    this.tableauDesCocktails = [
+      new Cocktail("Mojito", "url", "alt", "description"),
+      new Cocktail("Virgin Colada", "url", "alt", "description"),
+      new Cocktail("Secret de la mer", "url", "alt", "description"),
+      new Cocktail("Monkey Jame Sour", "url", "alt", "description"),
+    ];
   }
 
   ngOnInit() {
+
   }
 
 }
