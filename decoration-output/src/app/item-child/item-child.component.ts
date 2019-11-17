@@ -1,18 +1,13 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { OnInit, Component } from '@angular/core';
 
 @Component({
   selector: 'app-item-child',
   templateUrl: './item-child.component.html',
-  styleUrls: ['./item-child.component.css']
+  styleUrls: ['./item-child.component.html']
 })
 
-export class ItemChildComponent {
+export class ItemChildComponent implements OnInit {
 
-  @Input('aliasInput') public enfantLanguage: string;
-  @Output('aliasOutput') public enfantDeleteEvent: EventEmitter<string> = new EventEmitter();
-
-  deleteOutput() {
-    this.enfantDeleteEvent.emit(this.enfantLanguage);
-  }
-
+  constructor() {}
+  ngOnInit() {}
 }

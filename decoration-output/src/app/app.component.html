@@ -1,22 +1,24 @@
-<div class="container p-2 ">
-  <h1 class="text-center my-5">Décoration @Output()</h1>
+<div class="container p-2">
+
+  <h1 class="text-center my-5">@Input() / @Output()</h1>
   <hr />
-  <div class="input-group my-5">
-
-    <input type="text" class="form-control" placeholder="Nom d'un langage ici..." [(ngModel)]="parentLanguage">
-
+  <div class="input-group">
+    <input 
+      class="form-control"
+      type="text"
+    />
     <div class="input-group-prepend">
-      <button type="button" class="btn btn-primary"
-        (click)="parentLanguageTable.push(parentLanguage)">
-      Ajouter</button>
+      <button 
+        type="button"
+        class="btn btn-secondary"
+      >Ajouter</button>
     </div>
   </div>
 
   <ul class="list-group">
-    <app-item-child 
-      *ngFor="let askResult of parentLanguageTable"
-      [aliasInput]="askResult"
-      (aliasOutput)="deleteLanguage($event)">
-    </app-item-child>
+    <app-item-child
+    
+    ></app-item-child>
   </ul>
+
 </div>
