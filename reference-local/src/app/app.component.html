@@ -1,0 +1,35 @@
+<div class="container p-2">
+  <h1 class="text-center my-5">Référence Locale - <small>#Ref</small></h1>
+  <hr />
+  <div class="input-group my-5">
+    <!-- <input 
+      type="text"
+      class="form-control"
+      [(ngModel)]="newName"
+    /> -->
+    <input 
+      type="text"
+      class="form-control"
+      #myRef
+    />
+    <div class="input-group-prepend">
+      <!-- <button
+        type="button"
+        class="btn btn-secondary"
+        (click)="tabName.push(newName)"
+      >Ajouter</button> -->
+      <button
+        type="button"
+        class="btn btn-secondary"
+        (click)="add(myRef)"
+      >Ajouter</button>
+    </div>
+  </div>
+  <ul class="list-group">
+    <app-item-child
+      *ngFor="let result of tabName"
+      [name]="result"
+      (deleteName)="deleteThisName($event)"
+    >Chargement app-item-child</app-item-child>
+  </ul>
+</div>
