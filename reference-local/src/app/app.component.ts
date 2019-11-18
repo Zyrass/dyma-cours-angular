@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html', 
+  templateUrl: './app.component.html',
   styleUrls: []
 })
 
@@ -15,7 +15,10 @@ export class AppComponent implements OnInit {
 
   // Propriétés
   public newText: string;
-  public tabText: string[] = [];
+  public tabText: string[] = [
+    "Noël approche à grand pas... Pensez aux cadeaux !!!",
+    "La neige tombera certainement dans la journée."
+  ];
 
   // Méthode pour ajouter une nouvelle référence afin de remplacer 
   // le double data-binding qui est lui très gourmand en ressource.

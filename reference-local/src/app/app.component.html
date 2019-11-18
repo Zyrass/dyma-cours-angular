@@ -1,17 +1,25 @@
 <nav class="navbar navbar-expend-lg navbar-dark bg-dark mb-5">
   <a href="#" class="navbar-brand">
-    <small>Chapitre {{ chapter }} - Leçon n° {{ lesson }} - <span class="text-warning">{{ title }}</span></small>
+      <span class="text-secondary">J'apprends Angular</span> avec <span class="text-info">Dyma.fr</span>
   </a>
-  <button class="navbar-toggler" data-toggle="collapse" data-target="#myNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <span class="navbar-text">
+      <small>
+          Chapitre {{ chapter }} - Leçon n° {{ lesson }} - 
+          <span class="text-warning">{{ title }}</span>
+        </small>
+  </span>
 </nav>
 
 <div class="container">
-  <h1 class="text-center mb-5">{{ title }}</h1>
+  <h1 class="text-center mb-5">{{ title }}<br />
+    <small>Aussi appelé : <strong>Référence Locale</strong></small>
+  </h1>
   <hr />
 
   <div class="input-group my-5">
+    <div class="input-group-prepend">
+      <span class="input-group-text" >Un évènement :</span>
+    </div>
     <!-- code en lien avec le double data-binding -->
     <!--    
     <input 
@@ -47,14 +55,19 @@
     </div>
   </div>
 
-  <ul class="list-group">
-    <!-- Ajout ci-dessous du component enfant (item-child) -->
-    <app-item-child
-      *ngFor="let currentIteration of tabText"
-      [aliasDecorateurInput]="currentIteration"
-      (aliasOutputEventEmitter)="deleteThisText($event)"
-    >Chargement du composant app-item-child</app-item-child>
-  </ul>
+  <div class="col-12">
+    <p class="lead text-center mb-5">
+      Ci-dessous 2 events créer en dur dans mon code. Ils ont pour but uniquement d'afficher la liste et non une liste vide au démarrage. Vous pouvez les supprimer ou en rajouter d'autres.
+    </p>
+    <ul class="list-group">
+      <!-- Ajout ci-dessous du component enfant (item-child) -->
+      <app-item-child
+        *ngFor="let currentIteration of tabText"
+        [aliasDecorateurInput]="currentIteration"
+        (aliasOutputEventEmitter)="deleteThisText($event)"
+      >Chargement du composant app-item-child</app-item-child>
+    </ul>
+  </div>
 
 </div>
 
