@@ -1,35 +1,60 @@
-<div class="container p-2">
-  <h1 class="text-center my-5">Référence Locale - <small>#Ref</small></h1>
+<nav class="navbar navbar-expend-lg navbar-dark bg-dark mb-5">
+  <a href="#" class="navbar-brand">
+    <small>Chapitre {{ chapter }} - Leçon n° {{ lesson }} - <span class="text-warning">{{ title }}</span></small>
+  </a>
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#myNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+
+<div class="container">
+  <h1 class="text-center mb-5">{{ title }}</h1>
   <hr />
+
   <div class="input-group my-5">
-    <!-- <input 
-      type="text"
-      class="form-control"
-      [(ngModel)]="newName"
-    /> -->
+    <!-- code en lien avec le double data-binding -->
+    <!--    
     <input 
       type="text"
       class="form-control"
-      #myRef
+      placeholder="Saisissez quelque chose ici..."
+      [(ngModel)]="newText"
+    /> 
+    -->
+
+    <!-- Le # permet de déclarer une référence. -->
+    <input 
+      type="text"
+      class="form-control"
+      placeholder="Saisissez quelque chose ici..."
+      #variableLocalOuReferenceLocale
     />
     <div class="input-group-prepend">
-      <!-- <button
-        type="button"
-        class="btn btn-secondary"
-        (click)="tabName.push(newName)"
-      >Ajouter</button> -->
+      <!-- Code en lien avec le double data-binding -->
+      <!-- 
       <button
         type="button"
         class="btn btn-secondary"
-        (click)="add(myRef)"
+        (click)="tabText.push(newText)"
+      >Ajouter</button>
+      -->
+
+      <button
+        type="button"
+        class="btn btn-secondary"
+        (click)="addNewTextWithAReference(variableLocalOuReferenceLocale)"
       >Ajouter</button>
     </div>
   </div>
+
   <ul class="list-group">
+    <!-- Ajout ci-dessous du component enfant (item-child) -->
     <app-item-child
-      *ngFor="let result of tabName"
-      [name]="result"
-      (deleteName)="deleteThisName($event)"
-    >Chargement app-item-child</app-item-child>
+      *ngFor="let currentIteration of tabText"
+      [aliasDecorateurInput]="currentIteration"
+      (aliasOutputEventEmitter)="deleteThisText($event)"
+    >Chargement du composant app-item-child</app-item-child>
   </ul>
+
 </div>
+

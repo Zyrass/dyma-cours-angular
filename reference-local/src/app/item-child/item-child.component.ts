@@ -1,16 +1,22 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 @Component({
   selector: 'app-item-child',
-  templateUrl: './item-child.component.html',
-  styles: []
+  templateUrl: './item-child.component.html', 
+  styleUrls: []
 })
+
 export class ItemChildComponent implements OnInit {
-  @Input() public name: string;
-  @Output() public deleteName: EventEmitter<string> = new EventEmitter();
+  // Décorateur Input()
+  @Input('aliasDecorateurInput') public showText: string;
+  // Décorateur Output()
+  @Output('aliasOutputEventEmitter') public deleteText: EventEmitter<string> = new EventEmitter();
+
+  // Métode qui nous permet de définir un EventEmitter afin de cibler un item précis
   delete() {
-    this.deleteName.emit(this.name);
+    this.deleteText.emit(this.showText);
   }
-  constructor() {}
+
   ngOnInit() {}
 
 }
