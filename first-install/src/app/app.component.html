@@ -1,177 +1,23 @@
-<style>
-
-  hr {
-    margin: 20px auto;
-    width: 50%;
-    border-top: 1px solid white;
-  }
-
-  :host {
-    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    color: #333;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  svg.material-icons {
-    height: 24px;
-    width: auto;
-  }
-
-  svg.material-icons:not(:last-child) {
-    margin-right: 8px;
-  }
-
-  .card svg.material-icons path {
-    fill: #888;
-  }
-
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .card {
-    border-radius: px;
-    border: 1px solid #eee;
-    background-color: #fafafa;
-    height: 40px;
-    width: 200px;
-    margin: 0 8px 16px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
-  }
-
-  .card-container .card:not(:last-child) {
-    margin-right: 0;
-  }
-
-  .card.card-small {
-    height: 16px;
-    width: 168px;
-  }
-
-  .card-container .card:not(.highlight-card) {
-    cursor: pointer;
-  }
-
-  .card-container .card:not(.highlight-card):hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(black, 0.35);
-  }
-
-  .card-container .card:not(.highlight-card):hover .material-icons path {
-    fill: rgb(105, 103, 103);
-  }
-
-  .card.highlight-card {
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
-    border: none;
-    width: auto;
-    min-width: 30%;
-    position: relative;
-  }
-
-  .card.card.highlight-card span {
-    margin-left: 60px;
-  }
-
-  a,
-  a:visited,
-  a:hover {
-    text-decoration: none;
-  }
-
-  .terminal {
-    position: relative;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 6px;
-    padding-top: 45px;
-    margin-top: 8px;
-    overflow: hidden;
-    background-color: rgb(15, 15, 16);
-  }
-
-  .terminal::before {
-    content: "\2022 \2022 \2022";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 4px;
-    background: #323232;
-    color: #c2c3c4;
-    width: 100%;
-    font-size: 2rem;
-    line-height: 0;
-    padding: 14px 0;
-    text-indent: 4px;
-  }
-
-  .terminal pre {
-    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-    color: #ccc;
-    padding: 0 1rem 1rem;
-    margin: 0;
-  }
-
-  .footer {
-    min-height: 80px;
-  }
-
-  .background {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-  }
-
-  canvas {
-    background-color: #222;
-    height: 100vh;
-  }
-
-  /* Responsive Styles */
-  @media screen and (max-width: 767px) {
-    .terminal {
-      width: 100%;
-    }
-  }
-</style>
-
-<nav class="navbar navbar-sticky navbar-expend-lg navbar-dark bg-dark mb-0">
+<nav class="navbar navbar-expend-lg navbar-dark bg-dark mb-0">
   <div class="navbar-brand">
-    <span class="text-secondary">J'apprends Angular</span> avec <span class="text-info">Dyma.fr</span>
+    <small><span class="text-secondary">J'apprends <span class="text-info">Angular</span></span> sur <span
+        class="text-warning">Dyma.fr</span></small>
   </div>
   <span class="navbar-text">
     <small>
-      Chapitre {{ chapter }} - Leçon n° {{ lesson }} -
+      <span class="text-white">Chapitre {{ chapter }} - Leçon n° {{ lesson }}</span> -
       <span class="text-warning">{{ title }}</span>
     </small>
   </span>
 </nav>
 
 <div class="container-fluid text-center py-5 bg-danger">
-
-
   <img width="200" alt="Angular Logo"
-  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
+    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
 
-<h1 class="text-center display-4"><span class="text-warning">{{ title }}</span></h1>
-Chapitre {{ chapter }} - Leçon {{ lesson }}
-<hr />
-<p class="lead text-white">Découverte du framework ANGULAR grâce à la plateforme de Dyma.FR</p>
+  <h1 class="text-center display-4"><span class="text-warning">{{ title }}</span></h1>
+  <hr />
+  <p class="lead text-white">Découverte du framework ANGULAR grâce à la plateforme de Dyma.FR</p>
 </div>
 
 <div class="container mt-5">
@@ -182,8 +28,8 @@ Chapitre {{ chapter }} - Leçon {{ lesson }}
       <h2 class="h3">Première étape - <small>Installer la CLI d'Angular</small></h2>
       <p>Une fois NodeJS installé, nous pouvons utiliser la commande <mark>npm</mark> afin de créer notre application
         angular.<br />Pour celà, nous allons utiliser dans notre terminal, cette ligne de commande :</p>
-      <div class="terminal">
-        <pre class="text-success">npm install -g @angular/cli</pre>
+      <div class="terminal w-100">
+        <pre>npm install -g @angular/cli</pre>
       </div>
       <div class="alert alert-info p5 my-3">
         <strong>Important :</strong> -g <em>permet une installation globale d'Angular</em></div>
@@ -196,8 +42,8 @@ Chapitre {{ chapter }} - Leçon {{ lesson }}
       <h2 class="h3">Deuxième étape - <small>Installer une app Angular</small></h2>
       <p>Une fois le CLI d'ANGULAR installé, nous pouvons créer notre application angular part le biais d'une nouvelle
         commande à exécuter dans notre terminal :</p>
-      <div class="terminal">
-        <pre class="text-success">ng new myApp</pre>
+      <div class="terminal w-100">
+        <pre>ng new myApp</pre>
       </div>
       <div class="alert alert-info p5 my-3">
         <strong>Important :</strong> myApp <em>correspond au nom de mon application</em>
@@ -218,8 +64,8 @@ Chapitre {{ chapter }} - Leçon {{ lesson }}
       <h2 class="h3">Troisième étape - <small>Se rendre dans notre app...</small></h2>
       <p>Une fois le CLI d'ANGULAR installé, nous devons créer notre application angular via le biais d'une commande à
         exécuter dans notre terminal.</p>
-      <div class="terminal">
-        <pre class="text-success">cd myApp</pre>
+      <div class="terminal w-100">
+        <pre>cd myApp</pre>
       </div>
       <div class="alert alert-info p5 my-3">
         <strong>Important :</strong> cd <em>veut simplement dire qu'on change de répertoire.</em>Ici nous aurons myApp/
@@ -232,20 +78,23 @@ Chapitre {{ chapter }} - Leçon {{ lesson }}
   <div class="row">
     <article class="my-3">
       <h2 class="h3">Quatrième étape - <small>Simuler un serveur locale...</small></h2>
-      <p>Une fois nos 3 étapes terminer, il nous reste plus qu'à voir le contenu des fichiers en lançant un serveur locale qui compilera et interprêtera intégralement notre application.</p>
-      <div class="terminal">
-        <pre class="text-success">ng serve</pre>
+      <p>Une fois nos 3 étapes terminer, il nous reste plus qu'à voir le contenu des fichiers en lançant un serveur
+        locale qui compilera et interprêtera intégralement notre application.</p>
+      <div class="terminal w-100">
+        <pre>ng serve</pre>
       </div>
       <div class="alert alert-info p5 my-3">
-        <strong>Important :</strong> Obligatoirement, le serveur sera démarrer sur : <strong>http://localhost:4200</strong>
+        <strong>Important :</strong> Obligatoirement, le serveur sera démarrer sur :
+        <strong>http://localhost:4200</strong>
       </div>
-      <p class="lead">Si l'on souhaite utiliser un autre serveur locale, nous ajouterons le paramètre <strong>--port</strong> suivie d'un numéro de port accessible.<br />Exemple :</p>
-      <div class="terminal">
-        <pre class="text-success">ng serve --port 5555</pre>
+      <p class="lead">Si l'on souhaite utiliser un autre serveur locale, nous ajouterons le paramètre
+        <strong>--port</strong> suivie d'un numéro de port accessible.<br />Exemple :</p>
+      <div class="terminal w-100">
+        <pre>ng serve --port 5555</pre>
       </div>
       <div class="alert alert-info p5 my-3">
-          Ainsi, le serveur locale sera accessible à cette adresse : <strong>http://localhost:5555</strong>
-        </div>
+        Ainsi, le serveur locale sera accessible à cette adresse : <strong>http://localhost:5555</strong>
+      </div>
     </article>
   </div>
 
@@ -258,5 +107,3 @@ Chapitre {{ chapter }} - Leçon {{ lesson }}
     </div>
   </div>
 </footer>
-
-
