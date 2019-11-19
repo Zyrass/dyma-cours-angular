@@ -1,9 +1,209 @@
-<div class="container mt-2">
-  <h1>Comprendre le fichier main.ts</h1>
-  <hr class="my-2"/>
+<nav class="navbar navbar-expend-lg navbar-dark bg-dark mb-0">
+  <div class="navbar-brand">
+    <small><span class="text-secondary">J'apprends <span class="text-info">Angular</span></span> sur <span
+        class="text-warning">Dyma.fr</span></small>
+  </div>
+  <span class="navbar-text">
+    <small>
+      <span class="text-white">Chapitre {{ chapter }} - Leçon n° {{ lesson }}</span> -
+      <span class="text-warning">{{ title }}</span>
+    </small>
+  </span>
+</nav>
 
-  <h2>Description</h2>
-  <p class="p-2">
-    Ici nous définissons le contenu qui sera afficher dans notre tag <mark>app-root</mark>.
-  </p>
+<div class="container-fluid text-center py-5 bg-danger">
+  <img width="200" alt="Angular Logo"
+    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
+
+  <h1 class="text-center display-4"><span class="text-warning">{{ title }}</span></h1>
+  <hr />
+  <p class="lead text-white">Découverte du framework ANGULAR grâce à la plateforme de Dyma.FR</p>
 </div>
+
+
+<div class="container my-5">
+  <h2>La logique du fichier main.ts</h2>
+  <p class="lead text-center my-3">
+    Ci-dessous j'affiche via plusieurs onglets, le contenu des commentaires que j'ai indiqué afin de comprendre ce que je
+    fais.
+  </p>
+
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab">
+      <a class="nav-item nav-link active" id="nav-index-tab" data-toggle="tab" href="#nav-index">index.html</a>
+      <a class="nav-item nav-link" id="nav-styles-tab" data-toggle="tab" href="#nav-styles">styles.css</a>
+      <a class="nav-item nav-link" id="nav-main-tab" data-toggle="tab" href="#nav-main">main.ts</a>
+      <a class="nav-item nav-link" id="nav-app-module-ts-tab" data-toggle="tab"
+        href="#nav-app-module-ts">app.m.ts</a>
+      <a class="nav-item nav-link" id="nav-app-component-ts-tab" data-toggle="tab"
+        href="#nav-app-component-ts">app.c.ts</a>
+      <a class="nav-item nav-link" id="nav-app-component-html-tab" data-toggle="tab"
+        href="#nav-app-component-html">app.c.html</a>
+      <a class="nav-item nav-link" id="nav-app-component-css-tab" data-toggle="tab"
+        href="#nav-app-component-css">app.c.css</a>
+    </div>
+  </nav><!-- /nav-tabs -->
+
+
+  <div class="tab-content" id="nav-tabContent">
+
+    <!-- INDEX.HTML -->
+    <div class="tab-pane fade show active py-5" id="nav-index">
+      <h3>index.html</h3>
+      <p>Dans mon fichier index.html, j'ajouterai uniquement :</p>
+      <table class="table table-hover table-striped text-center">
+        <thead class="bg-dark text-white">
+          <tr>
+            <th>#</th>
+            <th>Nom</th>
+            <th>description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>CSS de Bootstrap</td>
+            <td>Framework CSS très connu. (Facilite le développement des applications)</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Scripts JS de Bootstrap</td>
+            <td>Permet d'interrargir avec les différents composants dynamiquement.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Font Google</td>
+            <td>Selon le besoin nous pourrons ajouter ici des fonts Google afin de changer le style d'écriture</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Font-Awesome</td>
+            <td>Permet d'ajouter un très grand nombre d'icônes très facilement.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="alert alert-danger"><strong>Avec le composant app-root qui n'est a ne surtout pas oublier</strong>
+      </div>
+
+      <pre>
+&lt;!--
+|----------------------------------------------------------------------------------
+| Le tag ci-dessous est en aucun cas un tag natif dans le langage HTML.
+| Donc pour qu'il soit interprêté, par le navigateur, il faut que nous
+| regardions le fichier main.ts
+|----------------------------------------------------------------------------------
+-->
+      </pre>
+    </div>
+
+    <!-- STYLES.CSS -->
+    <div class="tab-pane fade p-5" id="nav-styles">
+      <h3>styles.css</h3>
+      <p class="lead">On ne peut pas faire plus simple. Ici se trouve le code CSS qui sera impacter sur toute notre application</p>
+    </div>
+
+    <!-- MAIN.TS -->
+    <div class="tab-pane fade p-5" id="nav-main">
+      <h3>main.ts</h3>
+      <pre>
+/*
+|----------------------------------------------------------------------------------
+| MAIN.TS
+|----------------------------------------------------------------------------------
+| Main.ts va nous permettre de faire en sorte que nos navigateurs puissent
+| interprêter nos "tags" qu'on aura créer de toute pièce grâce à nos composants.
+| Aussi appelé (component).
+|
+| Le fichier main.ts est donc une brique indispensable au bon fonctionnement 
+| de notre application.
+|----------------------------------------------------------------------------------
+*/
+      </pre>
+      <pre>
+/*
+|----------------------------------------------------------------------------------
+| AppModule correspond à la classe qui est elle exportée du fichier 
+|----------------------------------------------------------------------------------
+*/
+      </pre>
+      <pre>
+/*
+|----------------------------------------------------------------------------------
+| plateformBrowserDynamic().bootstrapModule(AppModule)
+| permet de lancer l'application et donc nous passons la classe AppModule
+|----------------------------------------------------------------------------------
+*/
+      </pre>
+
+    </div>
+
+    <!-- APP.MODULE.TS -->
+    <div class="tab-pane fade p-5" id="nav-app-module-ts">
+    <h3>app.module.ts</h3>
+    <pre>
+/*
+|--------------------------------------------------------------------------------
+| APP.MODULE.TS
+|--------------------------------------------------------------------------------
+| Le fichier app.module.ts permet de lié le fichier app.component.ts
+| Une fois lié, nous exportons à la fin la classe dans le fichier main.ts
+|--------------------------------------------------------------------------------
+*/
+    </pre>
+    
+    <pre>
+/*
+|--------------------------------------------------------------------------------
+| Ici j'importe la classe AppComponent du fichier app/app.component.ts
+|--------------------------------------------------------------------------------
+*/
+    </pre>
+
+    <pre>
+/*
+|--------------------------------------------------------------------------------
+| Déclaration d'un décorateur. Ici : @NgModule
+|--------------------------------------------------------------------------------
+*/
+    </pre>
+
+    <pre>
+/*
+|--------------------------------------------------------------------------------
+| Ici nous exportons AppModule qui sera lui utilisé dans le fichier main.ts
+|--------------------------------------------------------------------------------
+*/
+    </pre>    
+    
+    </div>
+
+    <!-- APP.COMPONENT.TS -->
+    <div class="tab-pane fade p-5" id="nav-app-component-ts">
+    <h3>app.component.ts</h3>
+    <p class="lead">Ici, nous définissons le selecteur qui pour mon application, elle correspond à app-root. Nous définissons ici le HTML directement ou via un fichier externe (dans notre cas dans un fichier externe). Mais il est aussi possible de mettre du code CSS ici. (Également pour nous c'est dans un autre fichier). Et pour finir jous exportons notre class qui est utilisé dans notre fichier app.module.ts</p>
+    </div>
+
+    <!-- APP.COMPONENT.html -->
+    <div class="tab-pane fade p-5" id="nav-app-component-html">
+    <h3>app.component.html</h3>
+    <p class="lead">Ici nous auront le code HTML ainsi que les interpolations et le reste du contenu spécifique lié à notre application. A savoir que ce fichier représente le code que sera interprêté et qui sera affiché à l'écran.</p>
+    </div>
+
+    <!-- APP.COMPONENT.CSS -->
+    <div class="tab-pane fade p-5" id="nav-app-component-css">
+    <h3>app.component.css</h3>
+    <p class="lead">C'est très simple, ici et uniquement ici, le code sera interprêté uniquement pour le composant app</p>
+    </div>
+
+  </div><!-- /tab-content -->
+
+</div><!-- /container -->
+
+<footer class="footer bg-dark mt-5 text-white">
+  <div class="container">
+    <div class="d-flex justify-content-center py-5">
+      &copy; Copyright - 2019-2020 - Dyma Tous droits réservé. <span class="ml-auto">Codé by Alain Guillon</span>
+    </div>
+  </div>
+</footer>

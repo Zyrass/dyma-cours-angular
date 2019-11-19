@@ -21,7 +21,7 @@ import { AppComponent } from './app.component';
 
 /*
 |----------------------------------------------------------------------------------
-| Déclaration d'une décoration ici : @NgModule
+| Déclaration d'un décorateur. Ici : @NgModule
 |----------------------------------------------------------------------------------
 */
 @NgModule({

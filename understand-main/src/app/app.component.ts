@@ -75,4 +75,9 @@ import { Component } from '@angular/core';
 |----------------------------------------------------------------------------------
 */
 
-export class AppComponent {}
+export class AppComponent {
+  // Pour la navigation + le titre de la page
+  public chapter: number = 1;
+  public lesson: number = 2;
+  public title: string = "Comprendre le fichier main.ts"
+}
