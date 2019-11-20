@@ -2,7 +2,7 @@
 > Ici j'apprends, le framework `Angular` sur la plateforme [Dyma](https://dyma.fr) que je recommande d'ailleurs vivement.
 
 > ***Je vais reprendre essentiellement ce que j'ai appris en essayant de le ré-expliquer***
-> **(Si du moins j'ai bien compris la notion).**
+*(Si du moins j'ai bien compris la notion).*
 
 ## Sommaire
 1. **first-install** - *Explication de la première installation du framework d'Angular*.
