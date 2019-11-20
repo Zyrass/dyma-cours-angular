@@ -2,19 +2,19 @@
 > Ici j'apprends, le framework `Angular` sur la plateforme [Dyma](https://dyma.fr) que je recommande d'ailleurs vivement.
 
 ## Sommaire
-1. [X] **first-install** - *Explication de la première installation du framework d'Angular*.
-2. [*] **understand-main** - *Comprendre le fonctionnement du fichier main.ts*
-3. [*] **creating-a-component** - *Création d'un composant avec le CLI et sans*
-4. [*] **options-cli** - *Voir les options possible avec la génération d'un composant avec le CLI*
-5. [*] **data-binding** - *Apprendre à utiliser les différentes possibilités pour interpoller notre contenu*
-6. [*] **directives** - *Utilisations des 3 types de directives existante **Les components**, **Les directives d'attributs** et **Les directives structurelles***
-7. [*] **projet-cocktails-demo** - *Projet crée avec Dyma*
-8. [*] **decoration-input** - *Découvrons comment d'un parent, il est possible d'accéder à un enfant.*
-9. [*] **decoration-output** - *Découvrons comment d'un enfant, il est possible d'accéder à son parent.*
-9. [] **encapsulation** - *A faire...*
-10. [*] **reference-local** - *Découvrons les références qui nous permettra d'alléger notre code en évitant le double data-binding*
-11. [*] **view-child** - *Découvrons une alternative pour afficher les références**
-12. [] **ng-content** - *Découvrons comment il est possible d'afficher le contenu situé entre nos tags qu'on aura créer*
+1. **[X] - first-install** - *Explication de la première installation du framework d'Angular*.
+2. **[X] - understand-main** - *Comprendre le fonctionnement du fichier main.ts*
+3. **[X] - creating-a-component** - *Création d'un composant avec le CLI et sans*
+4. **[X] - options-cli** - *Voir les options possible avec la génération d'un composant avec le CLI*
+5. **[X] - data-binding** - *Apprendre à utiliser les différentes possibilités pour interpoller notre contenu*
+6. **[X] - directives** - *Utilisations des 3 types de directives existante **Les components**, **Les directives d'attributs** et **Les directives structurelles***
+7. **[X] - projet-cocktails-demo** - *Projet crée avec Dyma*
+8. **[X] - decoration-input** - *Découvrons comment d'un parent, il est possible d'accéder à un enfant.*
+9. **[X] - decoration-output** - *Découvrons comment d'un enfant, il est possible d'accéder à son parent.*
+9. **[] - encapsulation** - *A faire...*
+10. **[X] - reference-local** - *Découvrons les références qui nous permettra d'alléger notre code en évitant le double data-binding*
+11. **[X] - view-child** - *Découvrons une alternative pour afficher les références**
+12. **[] - ng-content** - *Découvrons comment il est possible d'afficher le contenu situé entre nos tags qu'on aura créer*
 
 ## Lancé un serveur de développement en local
 
