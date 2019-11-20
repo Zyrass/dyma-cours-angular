@@ -2,7 +2,7 @@
 > Ici j'apprends, le framework `Angular` sur la plateforme [Dyma](https://dyma.fr) que je recommande d'ailleurs vivement.
 
 ## Sommaire
-1. [*] **first-install** - *Explication de la première installation du framework d'Angular*.
+1. [X] **first-install** - *Explication de la première installation du framework d'Angular*.
 2. [*] **understand-main** - *Comprendre le fonctionnement du fichier main.ts*
 3. [*] **creating-a-component** - *Création d'un composant avec le CLI et sans*
 4. [*] **options-cli** - *Voir les options possible avec la génération d'un composant avec le CLI*
