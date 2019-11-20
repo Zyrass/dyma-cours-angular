@@ -22,7 +22,18 @@
 
 <div class="container my-5">
   <h2>Affiché le contenu situé entre nos sélecteurs créer précédemment.</h2>
-</div>
+  <p class="lead my-5">Voici le contenu de mon app-enfant. J'affiche le contenu situé entre mon selecteur app-enfant où je veux dans ma page. <strong>A savoir que je peux seulement l'affiché qu'une seule fois.</strong></p>
+
+  <ul class="list-group">
+    <!-- 
+      |------------------------------------------------------------------------------------------------------------
+      | Le contenu de base ne sera pas visible sans avoir utiliser le ng-content dans le html de enfant.component
+      |------------------------------------------------------------------------------------------------------------
+    -->
+    <app-enfant>
+      Je suis un contenu sans rien - Visible grâce à ng-content
+    </app-enfant>
+  </ul>
 
 <footer class="footer bg-dark mt-5 text-white">
   <div class="container">
