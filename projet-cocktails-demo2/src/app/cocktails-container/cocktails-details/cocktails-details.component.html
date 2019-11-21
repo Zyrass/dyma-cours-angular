@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="col-12">
+        <h2 class="text-right my-5">{{ cocktailDemo.name }}</h2>
+        <hr />
+    </div>
+</div>
+
+<div class="row mt-5 mb-3">
+    <div class="col-5">
+        <img class="img-fluid" [src]="cocktailDemo.urlImage" [alt]="cocktailDemo.altImage">
+    </div>
+    <div class="col-7 p-4">
+        <h4 class="mb-3">Descriptition :</h4>
+        <p class="lead">
+            {{ cocktailDemo.description }}
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <!-- Button trigger modal -->
+        <button class="btn btn-outline-info" data-toggle="modal" data-target="#recetteCocktail">Voir la
+            recette</button>&nbsp;
+        <button class="btn btn-outline-danger">Éditer le cocktail</button>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="recetteCocktail" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title text-warning" id="exampleModalCenterTitle">{{ cocktailDemo.name }}</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true" class="text-white">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h4 class="mb-3">Ingrédiants :</h4>
+                <!-- <ul>
+                        <li>{{ mojito.ingrediants.ingrediant1 }}</li>
+                        <li>{{ mojito.ingrediants.ingrediant2 }}</li>
+                        <li>{{ mojito.ingrediants.ingrediant3 }}</li>
+                        <li>{{ mojito.ingrediants.ingrediant4 }}</li>
+                        <li>{{ mojito.ingrediants.ingrediant5 }}</li>
+                    </ul>
+    
+                    <hr /> -->
+
+                <ul>
+                    <li *ngFor="let ingrediant of mojito2">{{ ingrediant }}</li>
+                </ul>
+            </div>
+            <div class="modal-footer bg-dark">
+                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fermer la recette</button>
+            </div>
+        </div>
+    </div>
+</div>

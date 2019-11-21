@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-12">
+        <h2 class="my-5">Nos Cocktails :</h2>
+    </div>
+</div>
+
+<ul class="list-group text-center">
+    <li *ngFor="let cocktail of tableauDesCocktails" class="list-group-item list-group-item-action">{{ cocktail.name }}
+    </li>
+</ul>
+
+<button class="btn btn-outline-primary mt-4">Ajouter un cocktail</button>
