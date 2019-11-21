@@ -14,6 +14,8 @@ export class AppComponent {
 
   public newMovie: string;
   public tabMovies: string[] = [];
+
+  // {static : true} - C'est un observable mais je ne sais pas encore à quoi sa sert.
   @ViewChild('myMovie', {static : true}) public el: ElementRef;
 
   /**

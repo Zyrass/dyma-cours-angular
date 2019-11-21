@@ -1,28 +1,31 @@
-<nav class="navbar navbar-expend-lg navbar-dark bg-dark mb-0">
-  <div class="navbar-brand">
-    <small><span class="text-secondary">J'apprends <span class="text-info">Angular</span></span> sur <span
-        class="text-warning">Dyma.fr</span></small>
+<header>
+  <nav class="navbar navbar-expend-lg navbar-dark bg-dark mb-0">
+    <div class="navbar-brand">
+      <small><span class="text-secondary">J'apprends <span class="text-info">Angular</span></span> sur <span
+          class="text-warning">Dyma.fr</span></small>
+    </div>
+    <span class="navbar-text">
+      <small>
+        <span class="text-white">Chapitre {{ chapter }} - Leçon n° {{ lesson }}</span> -
+        <span class="text-warning">{{ title }}</span>
+      </small>
+    </span>
+  </nav>
+
+  <div class="container-fluid text-center py-5 bg-danger">
+    <img width="200" alt="Angular Logo"
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
+
+    <h1 class="text-center display-4"><span class="text-warning">{{ title }}</span></h1>
+    <hr />
+    <p class="lead text-white">Découverte du framework ANGULAR grâce à la plateforme de Dyma.FR</p>
   </div>
-  <span class="navbar-text">
-    <small>
-      <span class="text-white">Chapitre {{ chapter }} - Leçon n° {{ lesson }}</span> -
-      <span class="text-warning">{{ title }}</span>
-    </small>
-  </span>
-</nav>
-
-<div class="container-fluid text-center py-5 bg-danger">
-  <img width="200" alt="Angular Logo"
-    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
-
-  <h1 class="text-center display-4"><span class="text-warning">{{ title }}</span></h1>
-  <hr />
-  <p class="lead text-white">Découverte du framework ANGULAR grâce à la plateforme de Dyma.FR</p>
-</div>
+</header>
 
 <div class="container my-5">
-  <h2>Affiché le contenu situé entre nos sélecteurs créer précédemment.</h2>
-  <p class="lead my-5">Voici le contenu de mon app-enfant. J'affiche le contenu situé entre mon selecteur app-enfant où je veux dans ma page. <strong>A savoir que je peux seulement l'affiché qu'une seule fois.</strong></p>
+  <h2>Affiché le contenu situé entre un sélecteur.</h2>
+  <p class="lead my-5">Voici le contenu de mon app-enfant. J'affiche le contenu situé entre mon selecteur app-enfant où
+    je veux dans ma page. <strong>A savoir que je peux seulement l'affiché qu'une seule fois.</strong></p>
 
   <ul class="list-group">
     <!-- 
@@ -31,9 +34,38 @@
       |------------------------------------------------------------------------------------------------------------
     -->
     <app-enfant>
-      Je suis un contenu sans rien - Visible grâce à ng-content
+      <p class="lead m-0 p-0">Le placement du contenu sera lui très important. Donc selon les informations que l'on
+        saisit, il nous est possible de placer notre contenu où l'on veut.<br />
+        <span class="text-warning">A savoir tout de même qu'un seul et même ng-content peut-être affiché. Ainsi, si nous saisissons 2x le même ng-content, le dernier ng-content sera lui pris en compte.</span>
+      </p>
+
+      <!-- Je suis le 1er CONTENU qui sera lui affiché en DERNIER dans mes LI -->
+      <div>
+        Je suis <span class="text-dark">un 1er texte</span> qui n'a aussi aucun sens. <strong class="text-dark">Je
+        proviens d'un tag : div</strong> Il est lui visible grâce à <span class="text-dark">ng-content select="div"</span> située dans le fichier
+        enfant.component.ts du répertoire enfant.
+      </div>
+
+      <br />
+      
+      <!-- Je suis l'avant dernier CONTENU qui sera lui placé en 1ER dans mes LI -->
+      <div jeSuisUnAttribut>
+        Je suis <span class="text-dark">un 2ème texte</span> qui n'a lui aussi aucun sens. <strong class="text-dark">Je proviens cet fois d'un attribut : jeSuisUnAttribut</strong> Il est lui visible grâce à <span class="text-dark">ng-content select="jeSuisUneAttribut"</span> située dans le
+        fichier enfant.component.ts du répertoire enfant.
+      </div>
+      
+      <br />
+
+      <!-- Je suis quant à moi, le DERNIER CONTENU mais je serai affiché en 2ème dans mes LI -->
+      <div class="jeSuisUneClasse">
+          Je suis <span class="text-dark">un 3ème texte</span> qui n'a aucun sens. <strong class="text-dark">Mais je proviens d'une classe</strong>
+        Il est visible grâce à <span class="text-dark">ng-content select=".jeSuisUneClasse"</span> situé dans mon le
+        fichier enfant.component.ts du répertoire enfant.
+      </div>
+
     </app-enfant>
   </ul>
+</div>
 
 <footer class="footer bg-dark mt-5 text-white">
   <div class="container">
