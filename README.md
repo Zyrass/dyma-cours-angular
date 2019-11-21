@@ -18,10 +18,10 @@
 9. **encapsulation** - ***A faire...***
 10. **reference-local** - *Découvrons les références qui nous permettra d'alléger notre code en évitant le double data-binding*
 11. **view-child** - *Découvrons une alternative pour afficher les références**
-12. **ng-content** - *Découvrons comment il est possible d'afficher le contenu situé entre nos tags qu'on aura créer*
+12. **ng-content** - ***A faire...*** *Découvrons comment il est possible d'afficher le contenu situé entre nos tags qu'on aura créer*
 13. **content-child** - ***A faire...*** *Découvrons comment il est possible d'afficher et d'intepreter des tags html même dans notre ng-content*
 14. **life-cycle** - ***A faire...*** *Découvrons les hooks d'angular - Surtout regardons la priorité d'exécution de chaque hook. (dyma l'explique très bien)*
-15. **projet-cocktails-demo-2** - *Ajouter le Input() et OutPut() sur notre projet de Cocktails entièrement ré-écrit pour parfaire mes connaissances.*
+15. **projet-cocktails-demo2** - ***A faire...*** *Ajouter le Input() et OutPut() sur notre projet de Cocktails entièrement ré-écrit pour parfaire mes connaissances.*
 
 ## Lancé un serveur de développement en local
 
