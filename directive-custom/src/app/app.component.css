@@ -38,8 +38,8 @@ a:hover {
 
 .terminal {
   position: relative;
-  width: 80%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 800px;
   border-radius: 6px;
   padding-top: 45px;
   margin-top: 8px;
@@ -68,6 +68,8 @@ a:hover {
   padding: 0 1rem 1rem;
   margin: 0;
 }
+
+.terminal pre code.modif { color : skyblue }
 
 /* 
      * ---------------------------------------------------------------------------------

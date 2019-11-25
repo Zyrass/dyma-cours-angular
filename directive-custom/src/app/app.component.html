@@ -21,15 +21,84 @@
 </div>
 
 <div class="container my-5">
-    <div class="col-10 mx-auto">
-      test
+  <h2>Conception d'une directive à la main</h2>
+  <hr />
 
-      <div class="terminal">
-        <pre>
-          test
-        </pre>
-      </div>
-    </div>
+  <h3>1 - Code du fichier : ./shared/directives/color.directive.ts</h3>
+  <div class="terminal mt-4">
+    <pre><code class="modif">
+      import &#123; Directive, OnInit, ElementRef, Renderer2 &#125; from '@angular/core';
+
+      @Directive(&#123;
+        selector: 'colorDirective'
+      &#125;)
+
+      export class ColorDirective implements OnInit &#123;
+
+        constructor(private el: ElementRef, private renderer: Renderer2) &#123; &#125;
+
+        ngOnInit() &#123;
+          this.renderer.setStyle(
+            this.el.nativeElement,
+            "color",
+            "salmon"
+          )
+        &#125;
+
+      &#125;</code>
+    </pre>
+  </div>
+  
+  <h3 class="my-4">2 - Code importer dans mon fichier app.module.ts</h3>
+  <div class="terminal">
+    <pre>
+      import &#123; BrowserModule &#125; from '@angular/platform-browser';
+      import &#123; NgModule &#125; from '@angular/core';
+
+      import &#123; AppComponent &#125; from './app.component';
+      <code class="modif">import &#123; ColorDirective &#125; from './shared/directives/color.directive';</code>
+
+      @NgModule(&#123;
+        declarations: [
+          AppComponent,
+          <code class="modif">ColorDirective</code>
+        ],
+        imports: [
+          BrowserModule
+        ],
+        providers: [],
+        bootstrap: [AppComponent]
+      })
+      export class AppModule &#123; &#125;
+    </pre>
+  </div>
+
+  <h3 class="my-4">3 - Code html du fichier app.component.html</h3>
+  <p class="lead">J'ai ajouter comme attribut ce que j'ai déclarer dans le selector de ma directive. soit : <strong>colorDirective</strong></p>
+  <div class="terminal">
+    <pre>
+      &lt;ul>
+        &lt;li&gt;Je suis un élément de la liste&lt;/li&gt;
+        &lt;li <code class="modif">colorDirective</code>>Je suis un élément de la liste&lt;/li&gt;
+        &lt;li&gt;Je suis un élément de la liste&lt;/li&gt;
+        &lt;li <code class="modif">colorDirective</code>>Je suis un élément de la liste&lt;/li&gt;
+        &lt;li&gt;Je suis un élément de la liste&lt;/li&gt;
+        &lt;li&gt;Je suis un élément de la liste&lt;/li&gt;
+        &lt;li <code class="modif">colorDirective</code>&gt;Je suis un élément de la liste&lt;/li&gt;
+      &lt;/ul&gt;
+    </pre>
+  </div>
+
+  <h3 class="my-4">4 - Voici le rendu visuel à l'écran</h3>
+  <ul>
+    <li>Je suis un élément de la liste</li>
+    <li colorDirective>Je suis un élément de la liste</li>
+    <li>Je suis un élément de la liste</li>
+    <li colorDirective>Je suis un élément de la liste</li>
+    <li>Je suis un élément de la liste</li>
+    <li>Je suis un élément de la liste</li>
+    <li colorDirective>Je suis un élément de la liste</li>
+  </ul>
 </div>
 
 
