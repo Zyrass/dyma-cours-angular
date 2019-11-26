@@ -69,7 +69,7 @@ a:hover {
   margin: 0;
 }
 
-.terminal pre code.modif { color : skyblue }
+.terminal pre code { color : skyblue }
 
 /* 
      * ---------------------------------------------------------------------------------

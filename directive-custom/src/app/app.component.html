@@ -26,7 +26,7 @@
 
   <h3>1 - Code du fichier : ./shared/directives/color.directive.ts</h3>
   <div class="terminal mt-4">
-    <pre><code class="modif">
+    <pre><code>
       import &#123; Directive, OnInit, ElementRef, Renderer2 &#125; from '@angular/core';
 
       @Directive(&#123;
@@ -56,12 +56,12 @@
       import &#123; NgModule &#125; from '@angular/core';
 
       import &#123; AppComponent &#125; from './app.component';
-      <code class="modif">import &#123; ColorDirective &#125; from './shared/directives/color.directive';</code>
+      <code>import &#123; ColorDirective &#125; from './shared/directives/color.directive';</code>
 
       @NgModule(&#123;
         declarations: [
           AppComponent,
-          <code class="modif">ColorDirective</code>
+          <code>ColorDirective</code>
         ],
         imports: [
           BrowserModule
@@ -79,12 +79,12 @@
     <pre>
       &lt;ul>
         &lt;li&gt;Je suis un élément de la liste&lt;/li&gt;
-        &lt;li <code class="modif">colorDirective</code>>Je suis un élément de la liste&lt;/li&gt;
+        &lt;li <code>colorDirective</code>>Je suis un élément de la liste&lt;/li&gt;
         &lt;li&gt;Je suis un élément de la liste&lt;/li&gt;
-        &lt;li <code class="modif">colorDirective</code>>Je suis un élément de la liste&lt;/li&gt;
+        &lt;li <code>colorDirective</code>>Je suis un élément de la liste&lt;/li&gt;
         &lt;li&gt;Je suis un élément de la liste&lt;/li&gt;
         &lt;li&gt;Je suis un élément de la liste&lt;/li&gt;
-        &lt;li <code class="modif">colorDirective</code>&gt;Je suis un élément de la liste&lt;/li&gt;
+        &lt;li <code>colorDirective</code>&gt;Je suis un élément de la liste&lt;/li&gt;
       &lt;/ul&gt;
     </pre>
   </div>
