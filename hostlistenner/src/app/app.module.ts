@@ -3,9 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { ColorDirective } from './shared/directives/color.directive'
+import { BackgroundColorDirective } from './shared/directives/babckground-color.directive'
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ColorDirective,
+    BackgroundColorDirective
   ],
   imports: [
     BrowserModule
