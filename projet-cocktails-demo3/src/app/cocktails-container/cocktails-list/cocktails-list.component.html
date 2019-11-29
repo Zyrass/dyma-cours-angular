@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-12">
+        <h2 class="mt-5 text-center">Liste des Cocktails :</h2>
+        <hr />
+    </div>
+</div>
+
+<ul class="list-group text-center">
+    
+    <!--
+        |-------------------------------------------------------------------------------------
+        | Ajout de l'index dans la boucle for pour récupérer l'index de l'itération en cours.
+        | Création d'un évènement click ou je passe l'index en cours.
+        | Enfin j'affiche l'itération en cours avec la propriété qui permet d'affiché le nom.
+        |-------------------------------------------------------------------------------------
+    -->
+    <li class="list-group-item list-group-item-action text-right"
+        *ngFor="
+            let iterationEnCours of listingCocktails;
+            let indexEnCours = index;
+        "
+        (click)="getCocktail(indexEnCours)"
+    >
+
+        <!--
+            |-------------------------------------------------------------------------------------
+            | Ici j'affiche l'itération en cours avec la propriété qui permet d'affiché le nom.
+            |-------------------------------------------------------------------------------------
+        -->
+        {{ iterationEnCours.name }}
+
+    </li>
+</ul>
+
+<button class="btn btn-outline-success btn-block mt-4">
+    Ajouter un cocktail
+</button>

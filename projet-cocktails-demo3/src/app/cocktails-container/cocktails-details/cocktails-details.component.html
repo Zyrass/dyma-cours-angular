@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-12">
+        <!--
+            |-------------------------------------------------------------------------------------
+            | Ici j'affiche la propriété (cocktail) de mon fichier cocktails-details.component.html
+            | Je lui assigne la propriété de ma classe Cocktail qui permet d'affiché le nom. (name)
+            |-------------------------------------------------------------------------------------
+        -->
+        <h2 class="text-center mt-5">
+            {{ cocktail.name }}
+        </h2>
+        <hr />
+    </div>
+</div>
+
+<div class="row mt-3 mb-5">
+    <div class="col-7 p-4">
+        <h4 class="mb-3">Descriptition :</h4>
+        <!--
+            |-------------------------------------------------------------------------------------
+            | Même chose avec la (description).
+            |-------------------------------------------------------------------------------------
+        -->
+        <p class="lead">
+            {{ cocktail.description }}
+        </p>
+    </div>
+    <div class="col-5">
+        
+        <!--
+            |-------------------------------------------------------------------------------------
+            | Ici J'interpole avec urlImage et altImage qui sont les propriétés adéquat.
+            |-------------------------------------------------------------------------------------
+        -->
+        <img 
+            class="img-fluid"
+            src="{{ cocktail.urlImage }}"
+            alt="{{ cocktail.altImage }}"
+        />
+    </div>
+</div>
