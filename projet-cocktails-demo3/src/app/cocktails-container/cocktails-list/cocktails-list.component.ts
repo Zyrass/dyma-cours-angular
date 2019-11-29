@@ -8,32 +8,15 @@ import { Cocktail } from 'src/app/shared/models/cocktail.model';
 })
 export class CocktailsListComponent implements OnInit {
 
-  /*
-  |-------------------------------------------------------------------------------------
-  | Je créer avec le décorateur Input une liaison avec le parent : (Parent vers Enfant)
-  | (cocktails-container.component.ts)
-  |-------------------------------------------------------------------------------------
-  */
   @Input() public listingCocktails: Cocktail[];
-
-  /*
-  |-------------------------------------------------------------------------------------
-  | Je créer avec le décorateur Output une liaison avec le parent : (Enfant vers Parent)
-  | (cocktails-container.component.ts)
-  | Je définis ici un EventEmitter de type nombre qui permettra de devenir l'index de
-  | notre itération en cours.
-  |-------------------------------------------------------------------------------------
-  */
   @Output() public indexEvent: EventEmitter<number> = new EventEmitter<number>();
 
-  /*
-  |-------------------------------------------------------------------------------------
-  | Je définis ici une méthode ou je passe en paramètre un nombre.
-  | Ce paramètre sera l'event créer précédemment.
-  | La méthode emit() provient de la classe EventEmitter.
-  |-------------------------------------------------------------------------------------
-  */
+  // Ajout de la propriétée (variable) afin de l'utiliser dans mon template html.
+  public activeCocktail: number;
+
+  // ici je passe l'index à la propriétée précédemment créer afin de l'exploiter dans ma directive active.directive.ts 
   getCocktail(parametreIndex: number): void {
+    this.activeCocktail = parametreIndex;
     this.indexEvent.emit(parametreIndex);
   }
 

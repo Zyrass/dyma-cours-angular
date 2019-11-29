@@ -6,13 +6,17 @@
 </div>
 
 <ul class="list-group text-center">
-    
+
     <!--
-        |-------------------------------------------------------------------------------------
-        | Ajout de l'index dans la boucle for pour récupérer l'index de l'itération en cours.
-        | Création d'un évènement click ou je passe l'index en cours.
-        | Enfin j'affiche l'itération en cours avec la propriété qui permet d'affiché le nom.
-        |-------------------------------------------------------------------------------------
+        -----------------------------------------------------------------------------------------------------------------
+        [appActive]='indexEnCours === activeCocktail'
+        -----------------------------------------------------------------------------------------------------------------
+        Est à la fois l'attribut définti dans le selector de la directive suivante : active.directive.ts
+        Mais aussi, il est binder à cette même directive via l'alias définit dans Input.
+        Je lui définit ici l'index qui correspond à l'itération en cours.
+        Afin que cette index soit pris en compte, je lui définis activeCocktail qui correspond à une simple variable
+        accessible dans la class cocktails-list.component.ts
+        -----------------------------------------------------------------------------------------------------------------
     -->
     <li class="list-group-item list-group-item-action text-right"
         *ngFor="
@@ -20,15 +24,9 @@
             let indexEnCours = index;
         "
         (click)="getCocktail(indexEnCours)"
+        [appActive]='indexEnCours === activeCocktail'
     >
-
-        <!--
-            |-------------------------------------------------------------------------------------
-            | Ici j'affiche l'itération en cours avec la propriété qui permet d'affiché le nom.
-            |-------------------------------------------------------------------------------------
-        -->
         {{ iterationEnCours.name }}
-
     </li>
 </ul>
 

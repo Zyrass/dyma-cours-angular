@@ -8,6 +8,9 @@ import { CocktailsContainerComponent } from './cocktails-container/cocktails-con
 import { CocktailsDetailsComponent } from './cocktails-container/cocktails-details/cocktails-details.component';
 import { CocktailsListComponent } from './cocktails-container/cocktails-list/cocktails-list.component';
 
+// Importation de ma directive
+import { ActiveDirective } from './shared/directives/active.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +18,8 @@ import { CocktailsListComponent } from './cocktails-container/cocktails-list/coc
     FooterComponent,
     CocktailsContainerComponent,
     CocktailsDetailsComponent,
-    CocktailsListComponent
+    CocktailsListComponent,
+    ActiveDirective // Implémentation de ma class ActiveDirective précédemment importé.
   ],
   imports: [
     BrowserModule
