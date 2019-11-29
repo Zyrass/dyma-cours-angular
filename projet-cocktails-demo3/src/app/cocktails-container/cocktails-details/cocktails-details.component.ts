@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Cocktail } from 'src/app/shared/cocktail.model';
+import { Cocktail } from 'src/app/shared/models/cocktail.model';
 
 @Component({
   selector: 'app-cocktails-details',
