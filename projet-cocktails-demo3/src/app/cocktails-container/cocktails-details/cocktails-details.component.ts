@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Cocktail } from 'src/app/shared/models/cocktail.model';
+import { Component, OnInit } from '@angular/core';
+import { Cocktail } from '../../shared/models/cocktail.model';
+import { CocktailService } from '../../shared/services/cocktail.service';
 
 @Component({
   selector: 'app-cocktails-details',
@@ -8,16 +9,15 @@ import { Cocktail } from 'src/app/shared/models/cocktail.model';
 })
 
 export class CocktailsDetailsComponent implements OnInit {
-  
-  /*
-  |-------------------------------------------------------------------------------------
-  | Je créer avec le décorateur Input une liaison avec le parent : (Parent vers Enfant)
-  | (cocktails-container.component.ts)
-  |-------------------------------------------------------------------------------------
-  */
-  @Input() public cocktail: Cocktail;
 
-  constructor() {}
-  ngOnInit() {}
+  public cocktail: Cocktail;
+
+  constructor(private cocktailService: CocktailService) { }
+
+  ngOnInit() {
+    this.cocktailService.cocktail.subscribe( 
+      (dataCocktail:Cocktail) => this.cocktail = dataCocktail
+    );
+  }
 
 }

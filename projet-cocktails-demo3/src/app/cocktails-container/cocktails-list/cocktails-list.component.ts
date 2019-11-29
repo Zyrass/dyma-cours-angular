@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Cocktail } from 'src/app/shared/models/cocktail.model';
+import { Component, OnInit, } from '@angular/core';
+import { Cocktail } from '../../shared/models/cocktail.model';
+import { CocktailService } from '../../shared/services/cocktail.service';
 
 @Component({
   selector: 'app-cocktails-list',
@@ -8,18 +9,20 @@ import { Cocktail } from 'src/app/shared/models/cocktail.model';
 })
 export class CocktailsListComponent implements OnInit {
 
-  @Input() public listingCocktails: Cocktail[];
-  @Output() public indexEvent: EventEmitter<number> = new EventEmitter<number>();
-
-  // Ajout de la propriétée (variable) afin de l'utiliser dans mon template html.
+  public listingCocktails: Cocktail[];
   public activeCocktail: number;
 
-  // ici je passe l'index à la propriétée précédemment créer afin de l'exploiter dans ma directive active.directive.ts 
+  constructor(private cocktailService: CocktailService) {}
+
+  ngOnInit() {
+    this.cocktailService.listingCocktails.subscribe ( (dataCocktails: Cocktail[]) => {
+      this.listingCocktails = dataCocktails
+    });
+  }
+  
   getCocktail(parametreIndex: number): void {
     this.activeCocktail = parametreIndex;
-    this.indexEvent.emit(parametreIndex);
+    this.cocktailService.selectCocktail(parametreIndex);
   }
 
-  constructor() {}
-  ngOnInit() {}
 }

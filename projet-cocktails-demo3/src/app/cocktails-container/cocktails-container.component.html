@@ -2,30 +2,11 @@
     <div class="row">
 
         <div class="col-7">
-
-            <!-- COCKTAILS-DETAILS -->
-            <!-- [cocktail] -> Provient de la décorateur @Input du fichier cocktails-details.component.ts -->
-            <app-cocktails-details
-                [cocktail]="unCocktail"
-            ></app-cocktails-details>
-
+            <app-cocktails-details></app-cocktails-details>
         </div><!-- /.col-7 -->
         
         <div class="col-5">
-
-            <!-- COCKTAILS-LIST -->
-                <!-- 
-                    [listingCocktails]          -> Provient de la décorateur @Input du fichier cocktails-list.component.ts
-                    ="listeDesCocktails"        -> Provient du fichier cocktails-container.component.ts (C'est mon tableau)
-                    
-                    [indexEvent]                -> Provient de la décorateur @Output du fichier cocktails-list.component.ts
-                    ="getOneCocktail($event)"   -> Provient du fichier cocktails-container.component.ts (C'est ma méthode)
-                -->
-            <app-cocktails-list
-                [listingCocktails]="listeDesCocktails"
-                (indexEvent)="getOneCocktail($event)"
-            ></app-cocktails-list>
-
+            <app-cocktails-list ></app-cocktails-list>
         </div><!-- /.col-5 -->
 
     </div><!-- /.row -->
